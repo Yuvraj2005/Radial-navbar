@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radial Navigation Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="toggle" id="toggle" onclick="menu-expand()">
+        <i class="fas fa-plus" id="plus"></i>
+    </div>
+    <div class="menu" id="menu">
+        <a class="video-icon" href="">
+            <i class="fas fa-video"></i>
+        </a>
+        <a class="phonevolume-icon" href="">
+            <i class="fas fa-phone-volume"></i>
+        </a>
+        <a class="address-icon" href="">
+            <i class="fas fa-address-book"></i>
+        </a>
+        <a class= "camera-icon" href="">
+            <i class="fas fa-camera"></i>
+        </a>
+        <a class="clock-icon" href="">
+            <i class="fas fa-clock"></i>
+        </a>
+        <a class="volume-icon" href="">
+            <i class="fas fa-volume-up"></i>
+        </a>
+    </div>
+    <script>
+        var i = 0;
+        function expand() {
+            if (i == 0) {
+                document.getElementById("menu").style.transform = "scale(4)";
+                document.getElementById("plus").style.transform = "rotate(137deg)";
+                i = 1;
+            }
+            else {
+                document.getElementById("menu").style.transform = "scale(0)";
+                document.getElementById("plus").style.transform = "rotate(0deg)";
+                i = 0;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
